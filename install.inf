@@ -1,0 +1,16 @@
+[info]
+title=Tab Colors
+desc=Allows to colorize tab headers per lexer, or per file extension
+type=cudatext-plugin
+subdir=cuda_tab_colors
+homepage=https://github.com/CudaText-addons/cuda_tab_colors
+
+[item1]
+section=events
+events=on_open
+
+[item10]
+section=commands
+caption=Tab Colors\Config
+method=config
+menu=o
