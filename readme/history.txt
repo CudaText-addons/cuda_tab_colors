@@ -1,3 +1,7 @@
 
+2020.11.09
++ allow lexer name in config as case-insensitive
++ handle bad color string in config
+
 2020.11.08
 initial version
