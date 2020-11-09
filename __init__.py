@@ -20,15 +20,21 @@ class Command:
 
         global colormap
         for key in colormap:
-            if key[0] == '.' and filename.endswith(key):
-                val = colormap[key]
-                break
-            elif key == lexer:
+            if key[0] == '.':
+                if filename.endswith(key):
+                    val = colormap[key]
+                    break
+            elif key.lower() == lexer.lower():
                 val = colormap[key]
                 break
 
         if val is not None:
-            ed_self.set_prop(PROP_TAB_COLOR, html_color_to_int(val))
+            try:
+                n = html_color_to_int(val)
+                ed_self.set_prop(PROP_TAB_COLOR, n)
+            except:
+                print('NOTE: Tab Colors: bad color string in config "%s"'%val)
+                pass
 
     def config(self):
 
