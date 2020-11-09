@@ -9,18 +9,16 @@ colormap = {}
 if os.path.isfile(fn_config):
     with open(fn_config, 'r') as f:
         colormap = json.load(f)
-print('colormap', colormap)
 
 class Command:
 
     def on_open(self, ed_self):
 
-        global colormap
         filename = ed_self.get_filename()
         lexer = ed_self.get_prop(PROP_LEXER_FILE)
-
         val = None
 
+        global colormap
         for key in colormap:
             if key[0] == '.' and filename.endswith(key):
                 val = colormap[key]
