@@ -1,3 +1,6 @@
+2020.01.15 (patch by @Jairo-Martinez)
++ add on_lexer event to avoid restart the editor to see tab color creating new
+  files
 
 2020.11.09
 + allow lexer name in config as case-insensitive

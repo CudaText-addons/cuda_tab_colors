@@ -7,7 +7,7 @@ homepage=https://github.com/CudaText-addons/cuda_tab_colors
 
 [item1]
 section=events
-events=on_open
+events=on_open,on_lexer
 
 [item10]
 section=commands
